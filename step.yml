@@ -91,3 +91,9 @@ inputs:
       is_expand: true
       is_required: true
       is_sensitive: true
+  - docker_image: marathonlabs/marathon-cloud:latest
+    opts:
+      title: Docker image to use for running marathon-cloud cli on Linux hosts
+      summary: You can specify your own custom image with a Docker Registry proxy here
+      description: |
+      is_required: false
