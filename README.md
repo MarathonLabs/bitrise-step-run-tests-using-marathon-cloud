@@ -2,6 +2,21 @@
 
 With this action you can easily run your Android instrumentation tests. Marathon Cloud is designed to run all your automated tests in just 15 minutes, no matter how many tests you have.
 
+## Example
+Typically this step will be run after build for ui testing:
+
+```yaml
+    - android-build-for-ui-testing@0:
+        inputs:
+        - variant: Debug
+        - project_location: "$BITRISE_SOURCE_DIR/android-app"
+        - module: app
+    - run-tests-using-marathon-cloud@x.y.z:
+        inputs:
+        - api_key: "$MARATHON_CLOUD_API_KEY"
+```
+
+Note: Don't forget to define a secret with your api key to authenticate to Marathon Cloud
 
 ## How to use this Step
 
