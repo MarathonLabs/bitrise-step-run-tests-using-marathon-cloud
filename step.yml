@@ -72,7 +72,7 @@ inputs:
       title: App File
       summary: Application binary path, e.g. apk file for Android or zip file of iOS Application
       description: |
-        **Android**: `application` should point to the APK file. **iOS**: `application` should point to an arm compatible Simulator build packaged in a zip archive.
+        **Android**: `application` should point to the APK file. **iOS**: `application` should point to an ARM compatible Simulator build packaged in an ipa format or a zip archive.
       is_expand: true
       is_required: true
   - test_application: ""
@@ -80,7 +80,7 @@ inputs:
       title: Test App File
       summary: Test application binary path, e.g. apk file for Android or zip file of iOS Test Runner app
       description: |
-        **Android**: `test_application` should point to the test .apk file for your app. **iOS**: `test_application` should point to an arm compatible iOS Test Runner app packaged in a zip archive.
+        **Android**: `test_application` should point to the test .apk file for your app. **iOS**: `test_application` should point to an ARM compatible iOS Test Runner app packaged in an ipa format or a zip archive.
       is_expand: true
       is_required: true
   - platform: ""
