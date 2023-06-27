@@ -3,7 +3,9 @@
 With this action you can easily run your Android or iOS tests. Marathon Cloud is designed to run all your automated tests in just 15 minutes, no matter how many tests you have.
 
 ## Example
-Typically this step will be run after build for ui testing:
+Typically this step will be run after the build for UI testing:
+
+### Android
 
 ```yaml
     - android-build-for-ui-testing@0:
@@ -17,6 +19,17 @@ Typically this step will be run after build for ui testing:
         - application: "$BITRISE_APK_PATH"
         - test_application: "$BITRISE_TEST_APK_PATH"
         - platform: Android
+```
+
+### iOS
+
+```yaml
+    - run-tests-using-marathon-cloud@x.y.z:
+        inputs:
+        - api_key: "$MARATHON_CLOUD_API_KEY"
+        - application: sample.zip
+        - test_application: sampleUITests-Runner.zip
+        - platform: iOS
 ```
 
 Note: Don't forget to define a secret with your api key to authenticate to Marathon Cloud
