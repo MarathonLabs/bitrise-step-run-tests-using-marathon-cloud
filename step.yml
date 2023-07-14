@@ -64,21 +64,21 @@ inputs:
   - application: ""
     opts:
       title: App File
-      summary: Application binary path, e.g. apk file for Android or zip file of iOS Application
+      summary: The application binary path refers to the APK file for Android or the ZIP file for the iOS application.
       description: |
         Application binary path.  
         For an Android project: app APK file path.  
-        For an iOS project: an ARM compatible Simulator build packaged in an APP format or a ZIP archive.  
+        For an iOS project: an ARM compatible Simulator build packaged in a ZIP archive.  
       is_expand: true
       is_required: true
   - test_application: ""
     opts:
       title: Test App File
-      summary: Test application binary path, e.g. apk file for Android or zip file of iOS Test Runner app
+      summary: The test application binary path refers to the APK file for Android or the ZIP file for the iOS Test Runner app.
       description: |
         Test application binary path.  
-        For an Android project: test app APK file path.    
-        For an iOS project: an ARM compatible Simulator iOS Test Runner app packaged in an APP format or a ZIP archive.  
+        For an Android project: test app APK file path.  
+        For an iOS project: an ARM compatible Simulator iOS Test Runner app packaged in a ZIP archive.  
       is_expand: true
       is_required: true
   - platform: ""
@@ -93,7 +93,7 @@ inputs:
       title: Marathon Cloud API key
       summary: API key for authenticating with Marathon Cloud
       description: |
-        Have a look at [the tokens page](https://cloud.marathonlabs.io/tokens) in the dashboard.      
+        Have a look at [the tokens page](https://cloud.marathonlabs.io/tokens) in the dashboard to obtain your token.      
       is_expand: true
       is_required: true
       is_sensitive: true
