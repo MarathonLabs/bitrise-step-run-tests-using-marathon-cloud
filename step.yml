@@ -103,3 +103,24 @@ inputs:
       summary: You can specify your own custom image with a Docker Registry proxy here
       description: ""
       is_required: false
+  - os_version: ""
+    opts:
+      title: OS version
+      summary: Android or iOS OS version
+      description: ""
+      is_expand: true
+      is_required: false
+  - run_name: ""
+    opts:
+      title: Name for run
+      summary: Name for run, for example it could be description of commit
+      description: ""
+      is_expand: true
+      is_required: false
+  - link: ""
+    opts:
+      title: Link to commit
+      summary: Link to commit
+      description: ""
+      is_expand: true
+      is_required: false

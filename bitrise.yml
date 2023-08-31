@@ -5,7 +5,7 @@ app:
   envs:
   - MARATHON_CLOUD_API_KEY: $MARATHON_CLOUD_API_KEY
   - BITRISE_STEP_ID: run-tests-using-marathon-cloud
-  - BITRISE_STEP_VERSION: "0.1.2"
+  - BITRISE_STEP_VERSION: "0.2.0"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/MarathonLabs/bitrise-step-run-tests-using-marathon-cloud.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:MarathonLabs/bitrise-steplib.git
 
@@ -48,6 +48,8 @@ workflows:
         - test_application: ./appTest.apk
         - platform: Android
         - api_key: $MARATHON_CLOUD_API_KEY
+        - os_version: 10
+        - run_name: "Android_Bitrise_run"
     - path::./:
         title: Step iOS Test
         description: |-
@@ -60,7 +62,8 @@ workflows:
         - application: ./sample.zip
         - test_application: ./sampleUITests-Runner.zip
         - platform: iOS
-        - api_key: $MARATHON_CLOUD_API_KEY    
+        - api_key: $MARATHON_CLOUD_API_KEY
+        - run_name: "iOS_Bitrise_run"
   # ----------------------------------------------------------------
   # --- workflows to Share this step into a Step Library
   audit-this-step:
