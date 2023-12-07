@@ -124,3 +124,17 @@ inputs:
       description: ""
       is_expand: true
       is_required: false
+  - system_image: default
+    opts:
+      title: OS-specific system image
+      summary: OS-specific system image. For Android one of `default` ,`google_apis`. For iOS only `default`
+      description: ""
+      is_expand: true
+      is_required: false
+  - isolated: false
+    opts:
+      title: Run each test using isolated execution
+      summary: Run each test using isolated execution. Default is false
+      description: ""
+      is_expand: true
+      is_required: false

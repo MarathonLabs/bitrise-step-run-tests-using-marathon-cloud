@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
 
-command_args=" -api-key $API_KEY -app $application -testapp $test_application -platform $platform"
+command_args=" -api-key $API_KEY -app $application -testapp $test_application -platform $platform -system-image $system_image -isolated $isolated"
 
 if [ -n "$os_version" ]; then
     command_args="$command_args -os-version $os_version"
