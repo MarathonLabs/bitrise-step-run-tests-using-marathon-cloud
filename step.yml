@@ -86,6 +86,9 @@ inputs:
       title: Testing platform
       summary: Testing platform. `Android` or `iOS` only
       description: ""
+      value_options:
+        - "Android"
+        - "iOS"  
       is_expand: true
       is_required: true
   - api_key:
@@ -129,6 +132,9 @@ inputs:
       title: OS-specific system image
       summary: OS-specific system image. For Android one of `default` ,`google_apis`. For iOS only `default`
       description: ""
+      value_options:
+        - "default"
+        - "google_apis"
       is_expand: true
       is_required: false
   - isolated: false
@@ -136,5 +142,8 @@ inputs:
       title: Run each test using isolated execution
       summary: Run each test using isolated execution. Default is false
       description: ""
+      value_options:
+        - "true"  
+        - "false"
       is_expand: true
       is_required: false

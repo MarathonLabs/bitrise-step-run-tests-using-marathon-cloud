@@ -5,7 +5,7 @@ app:
   envs:
   - MARATHON_CLOUD_API_KEY: $MARATHON_CLOUD_API_KEY
   - BITRISE_STEP_ID: run-tests-using-marathon-cloud
-  - BITRISE_STEP_VERSION: "0.3.3"
+  - BITRISE_STEP_VERSION: "0.3.4"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/MarathonLabs/bitrise-step-run-tests-using-marathon-cloud.git
   - MY_STEPLIB_REPO_FORK_GIT_URL: git@github.com:MarathonLabs/bitrise-steplib.git
 
