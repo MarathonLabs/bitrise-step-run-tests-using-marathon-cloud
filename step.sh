@@ -3,7 +3,7 @@ set -ex
 
 run_platform=$(echo "$platform" | awk '{print tolower($0)}')
 command_args="run $run_platform"
-command_args="$command_args --api-key $API_KEY"
+command_args="$command_args --api-key $api_key"
 command_args="$command_args --application $application"
 command_args="$command_args --test-application $test_application"
 command_args="$command_args --system-image $system_image"
@@ -19,10 +19,6 @@ fi
 
 if [ -n "$run_name" ]; then
 	command_args="$command_args --name $run_name"
-fi
-
-if [ -n "$wait" ]; then
-	command_args="$command_args --wait $wait"
 fi
 
 if [ -n "$ignore_test_failures" ]; then
