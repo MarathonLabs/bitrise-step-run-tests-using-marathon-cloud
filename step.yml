@@ -50,15 +50,13 @@ type_tags:
 #
 deps:
   brew:
-  - name: malinskiy/tap/marathon-cloud
+    - name: malinskiy/tap/marathon-cloud
 #   apt_get:
 #   - name: cmake
-
 
 toolkit:
   bash:
     entry_file: step.sh
-
 
 inputs:
   - application: ""
@@ -68,7 +66,7 @@ inputs:
       description: |
         Application binary path.  
         For an Android project: app APK file path.  
-        For an iOS project: an ARM compatible Simulator build packaged in a ZIP archive.  
+        For an iOS project: an ARM compatible Simulator build packaged in a ZIP archive.
       is_expand: true
       is_required: true
   - test_application: ""
@@ -78,7 +76,7 @@ inputs:
       description: |
         Test application binary path.  
         For an Android project: test app APK file path.  
-        For an iOS project: an ARM compatible Simulator iOS Test Runner app packaged in a ZIP archive.  
+        For an iOS project: an ARM compatible Simulator iOS Test Runner app packaged in a ZIP archive.
       is_expand: true
       is_required: true
   - platform: ""
@@ -88,7 +86,7 @@ inputs:
       description: ""
       value_options:
         - "Android"
-        - "iOS"  
+        - "iOS"
       is_expand: true
       is_required: true
   - api_key:
@@ -96,7 +94,7 @@ inputs:
       title: Marathon Cloud API key
       summary: API key for authenticating with Marathon Cloud
       description: |
-        Have a look at [the tokens page](https://cloud.marathonlabs.io/tokens) in the dashboard to obtain your token.      
+        Have a look at [the tokens page](https://cloud.marathonlabs.io/tokens) in the dashboard to obtain your token.
       is_expand: true
       is_required: true
       is_sensitive: true
@@ -122,8 +120,8 @@ inputs:
       is_required: false
   - link: ""
     opts:
-      title: Link to commit
-      summary: Link to commit
+      title: Optional link, for example it could be a link to source control commit or CI run
+      summary: Optional link, for example it could be a link to source control commit or CI run
       description: ""
       is_expand: true
       is_required: false
@@ -143,7 +141,17 @@ inputs:
       summary: Run each test using isolated execution. Default is false
       description: ""
       value_options:
-        - "true"  
+        - "true"
+        - "false"
+      is_expand: true
+      is_required: false
+  - ignore_test_failures: false
+    opts:
+      title: Ignore test failures
+      summary: When tests fail and this option is true then cli will exit with code 0. By default, cli will exit with code 1 in case of test failures and 0 for passing tests
+      description: ""
+      value_options:
+        - "true"
         - "false"
       is_expand: true
       is_required: false
